@@ -33,6 +33,7 @@ func (warrior *Warrior) registerDevastateSpell() {
 			DamageMultiplier: 1,
 			ThreatMultiplier: 1,
 			FlatThreatBonus:  100,
+			BonusCritRating:  5.0 * float64(warrior.Talents.SwordAndBoard) * core.CritRatingPerCritChance,
 
 			BaseDamage: core.BaseDamageConfig{
 				Calculator: func(sim *core.Simulation, hitEffect *core.SpellEffect, spell *core.Spell) float64 {
